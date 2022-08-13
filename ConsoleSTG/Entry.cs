@@ -12,7 +12,7 @@ namespace ConsoleSTG
 
             Entry program = new Entry();
 
-            JConsole.MainLoop(program.Game, 0);
+            JConsole.MainLoop(program.Game, 1000 / 30);
         }
     }
 }

@@ -6,11 +6,30 @@ namespace ConsoleSTG
 {
     public partial class Entry
     {
-        public string PlayerSprite = "aa\naaaa\naaaa";
+        public string PlayerSprite = " ^\n< > ";
+        public (int x, int y) PlayerPosition = (0, 0);
 
         public void Game()
         {
-            JConsole.Write(10, 10, PlayerSprite);
+            if (Keyboard.IsKeyPressed(Key.A))
+            {
+                PlayerPosition.x--;
+                PlayerPosition.x--;
+            }
+            if (Keyboard.IsKeyPressed(Key.D))
+            {
+                PlayerPosition.x++;
+                PlayerPosition.x++;
+            }
+            if (Keyboard.IsKeyPressed(Key.W))
+            {
+                PlayerPosition.y--;
+            }
+            if (Keyboard.IsKeyPressed(Key.S))
+            {
+                PlayerPosition.y++;
+            }
+            JConsole.Write(PlayerPosition.x, PlayerPosition.y, PlayerSprite);
         }
     }
 }

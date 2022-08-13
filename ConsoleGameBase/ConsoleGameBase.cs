@@ -15,16 +15,6 @@ namespace ConsoleGameBase
         public static (int, int) PrevWindowSize;
         public static (int, int) WindowSize;
 
-        public static void Init(int width, int height)
-        {
-            Console.SetWindowSize(width, height);
-
-            Width = width;
-            Height = height;
-
-            Resize();
-        }
-
         public static void Init()
         {
             Width = Console.WindowWidth;
