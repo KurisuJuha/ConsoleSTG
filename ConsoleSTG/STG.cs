@@ -11,24 +11,25 @@ namespace ConsoleSTG
 
         public void Game()
         {
-            if (Keyboard.IsKeyPressed(Key.A))
+            if (Keyboard.IsKeyPressed(Key.LeftArrow))
             {
                 PlayerPosition.x--;
                 PlayerPosition.x--;
             }
-            if (Keyboard.IsKeyPressed(Key.D))
+            if (Keyboard.IsKeyPressed(Key.RightArrow))
             {
                 PlayerPosition.x++;
                 PlayerPosition.x++;
             }
-            if (Keyboard.IsKeyPressed(Key.W))
+            if (Keyboard.IsKeyPressed(Key.UpArrow))
             {
                 PlayerPosition.y--;
             }
-            if (Keyboard.IsKeyPressed(Key.S))
+            if (Keyboard.IsKeyPressed(Key.DownArrow))
             {
                 PlayerPosition.y++;
             }
+
             JConsole.Write(PlayerPosition.x, PlayerPosition.y, PlayerSprite);
         }
     }

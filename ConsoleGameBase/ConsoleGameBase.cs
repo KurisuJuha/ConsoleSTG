@@ -56,7 +56,7 @@ namespace ConsoleGameBase
         public static void SetPoint(int x,int y, char c)
         {
             int p = y * Width + x;
-            if (builder.Length > p)
+            if (builder.Length > p && 0 <= p)
             {
                 builder[y * Width + x] = c;
             }
